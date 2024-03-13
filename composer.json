@@ -18,6 +18,7 @@
         "ext-simplexml": "*",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "1.x-dev",
+        "drupal/addtoany": "^2.0",
         "drupal/admin_toolbar": "^3.3",
         "drupal/allowed_formats": "^2.0",
         "drupal/coder": "8.3.17",
