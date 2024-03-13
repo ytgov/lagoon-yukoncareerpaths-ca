@@ -11,5 +11,3 @@ settings:
       title: Large
 element:
   default_more_title: Plus
-mail:
-  default_from_name: '[site:name]'

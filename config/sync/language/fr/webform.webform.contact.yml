@@ -1,3 +1,28 @@
-title: Contact
+description: '<p>Basic email contact webform.</p>'
+elements: |-
+  name:
+    '#type': textfield
+    '#title': Name
+    '#required': true
+    '#default_value': '[current-user:display-name]'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  email:
+    '#type': email
+    '#title': 'Email address'
+    '#placeholder': email@address.com
+    '#required': true
+    '#default_value': '[current-user:mail]'
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+  message:
+    '#type': textarea
+    '#title': 'Your message'
+    '#placeholder': 'Write your message...'
+    '#required': true
+    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
+    '#test': 'Please ignore this email.'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Send message'
 settings:
   confirmation_message: 'Votre message a été envoyé.'

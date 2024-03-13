@@ -1,15 +1,14 @@
-label: 'Bibliothèque de blocs personnalisés'
-description: 'Trouver et gérer les blocs personnalisés.'
 display:
   default:
     display_title: 'Par défaut'
     display_options:
-      title: 'Bibliothèque de blocs personnalisés'
       fields:
-        info:
-          label: 'Description du bloc'
+        title:
+          label: Titre
         type:
-          label: 'Type de bloc'
+          label: 'Type de contenu'
+        name:
+          label: Auteur
         changed:
           label: 'Mis à jour'
         operations:
@@ -19,26 +18,24 @@ display:
           tags:
             next: 'Suivant ›'
             previous: '‹ Précédent'
+            first: '« Premier'
+            last: 'Dernier »'
           expose:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
       exposed_form:
         options:
-          submit_button: Appliquer
+          submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-      empty:
-        area_text_custom:
-          content: "Il n'y a pas de bloc personnalisé disponible."
       filters:
-        info:
+        title:
           expose:
-            label: 'Description du bloc'
+            label: Titre
         type:
           expose:
-            label: 'Type de bloc'
-  page_1:
-    display_options:
-      menu:
-        title: 'Bibliothèque de blocs personnalisés'
+            label: 'Type de contenu'
+        langcode:
+          expose:
+            label: Langue

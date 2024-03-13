@@ -14,6 +14,8 @@ display:
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
           tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
             first: '« Premier'
             last: 'Dernier »'
       fields:
@@ -21,8 +23,6 @@ display:
           label: État
         label:
           label: Libellé
-        type:
-          label: Type
         source_language:
           label: 'A partir de'
         target_language:
