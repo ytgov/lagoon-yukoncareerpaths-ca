@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43588d87fbbd50e426d6e4858aa7729c",
+    "content-hash": "fd6ce6119fec14e878ace61fe9e00ceb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -872,16 +872,16 @@
         },
         {
             "name": "cweagans/composer-patches",
-            "version": "1.7.3",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cweagans/composer-patches.git",
-                "reference": "e190d4466fe2b103a55467dfa83fc2fecfcaf2db"
+                "reference": "37e1b296d8100845c7b10c143cc3e96552d41ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/e190d4466fe2b103a55467dfa83fc2fecfcaf2db",
-                "reference": "e190d4466fe2b103a55467dfa83fc2fecfcaf2db",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/37e1b296d8100845c7b10c143cc3e96552d41ab1",
+                "reference": "37e1b296d8100845c7b10c143cc3e96552d41ab1",
                 "shasum": ""
             },
             "require": {
@@ -914,9 +914,9 @@
             "description": "Provides a way to patch Composer packages.",
             "support": {
                 "issues": "https://github.com/cweagans/composer-patches/issues",
-                "source": "https://github.com/cweagans/composer-patches/tree/1.7.3"
+                "source": "https://github.com/cweagans/composer-patches/tree/1.x"
             },
-            "time": "2022-12-20T22:53:13+00:00"
+            "time": "2023-01-26T17:59:26+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -12342,6 +12342,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "cweagans/composer-patches": 20,
         "drupal/linkit": 10,
         "drupal/openid_connect": 15,
         "drupal/svg_image_field": 10,
