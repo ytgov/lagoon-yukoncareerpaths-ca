@@ -22,6 +22,7 @@ Import the DB
 - `lando drush sql-sync @lagoon.production @self`
 
 ### CONFIGURATION
+
 -------------
 #### Lando Tooling
 - Run `lando code-standards`.
