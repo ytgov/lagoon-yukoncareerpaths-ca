@@ -1,59 +1,38 @@
-uuid: 1d07a9e6-9433-4b50-a40c-f65f04500279
+uuid: 42b2f540-6e48-4be1-8218-1af3e63056b8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.blog.body
-    - field.field.node.blog.field_meta_tags
-    - field.field.node.blog.field_tags
-    - field.field.node.blog.simplenews_issue
-    - node.type.blog
-    - workflows.workflow.editorial
+    - field.field.node.simplenews_issue.body
+    - field.field.node.simplenews_issue.simplenews_issue
+    - node.type.simplenews_issue
   module:
     - content_moderation
-    - metatag
     - path
     - simplenews
     - text
-id: node.blog.default
+_core:
+  default_config_hash: 95gz1Cn7UjP1ED-lgXnR9ucmWPz9TOn1YEuKUllmELo
+id: node.simplenews_issue.default
 targetEntityType: node
-bundle: blog
+bundle: simplenews_issue
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
-    region: content
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_meta_tags:
-    type: metatag_firehose
-    weight: 123
     region: content
-    settings:
-      sidebar: true
-      use_details: true
-    third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 122
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -64,8 +43,8 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 100
-    region: content
     settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path
@@ -75,62 +54,52 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
-    region: content
     settings:
       display_label: true
+    weight: 15
     third_party_settings: {  }
-  simple_sitemap:
-    weight: 10
     region: content
-    settings: {  }
-    third_party_settings: {  }
   simplenews_issue:
     type: simplenews_issue
-    weight: 124
-    region: content
+    weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   status:
     type: boolean_checkbox
-    weight: 120
-    region: content
     settings:
       display_label: true
+    weight: 120
+    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
-    region: content
     settings:
       display_label: true
+    weight: 16
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
-    weight: -5
-    region: content
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 10
     region: content
-    settings: {  }
-    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5
-    region: content
     settings:
       match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
+    region: content
   url_redirects:
     weight: 50
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

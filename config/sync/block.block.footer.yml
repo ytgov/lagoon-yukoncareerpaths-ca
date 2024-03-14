@@ -11,7 +11,7 @@ dependencies:
 id: footer
 theme: govt_yukon_rms
 region: footer_menu
-weight: 0
+weight: -8
 provider: null
 plugin: 'menu_block:footer'
 settings:

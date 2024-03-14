@@ -1,0 +1,34 @@
+uuid: cb5df050-7d19-4e5a-a055-12dcd60647b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - simplenews
+  theme:
+    - govt_yukon_rms
+id: simplenewssubscription
+theme: govt_yukon_rms
+region: sidebar
+weight: -7
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Simplenews subscription'
+  label_display: visible
+  provider: simplenews
+  newsletters: {  }
+  default_newsletters:
+    default: default
+  message: 'Stay informed - subscribe to our newsletter.'
+  show_manage: true
+  unique_id: 599c63b6-3ec3-40ef-a162-f0e2e0dd8e68
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog: blog

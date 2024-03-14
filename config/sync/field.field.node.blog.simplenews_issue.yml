@@ -1,0 +1,23 @@
+uuid: 72cc4c67-8794-44f1-b378-eeabfc5265db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.simplenews_issue
+    - node.type.blog
+  module:
+    - simplenews
+id: node.blog.simplenews_issue
+field_name: simplenews_issue
+entity_type: node
+bundle: blog
+label: Issue
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:simplenews_newsletter'
+  handler_settings: {  }
+field_type: simplenews_issue
