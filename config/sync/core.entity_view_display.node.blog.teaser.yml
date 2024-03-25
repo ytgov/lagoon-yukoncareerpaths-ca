@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog.body
+    - field.field.node.blog.field_image
     - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_tags
     - field.field.node.blog.simplenews_issue
@@ -37,6 +38,7 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_image: true
   field_meta_tags: true
   field_tags: true
   langcode: true

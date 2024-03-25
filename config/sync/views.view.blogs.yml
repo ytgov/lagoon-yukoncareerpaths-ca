@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Blogs
+      title: 'Yukon Career Paths Blog'
       fields:
         title:
           id: title
@@ -161,7 +161,20 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "Welcome to our blog, your go-to resource for career opportunities in Yukon, Canada. Explore insightful articles, expert advice, and inspiring stories from individuals making their mark in various industries across the region. Join us as we delve into the diverse and exciting world of Yukon's job market!\r\n\r\nIn each post, we aim to provide valuable insights, tips, and resources to help you navigate the job market, discover new career paths, and make informed decisions about your professional journey. From in-depth guides on industry trends to personal narratives from local professionals, our blog covers a wide range of topics to cater to your interests and aspirations. "
+            format: full_html
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -179,8 +192,23 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: blogs
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+        simple_sitemap_display_extender: {  }
+      path: blog
     cache_metadata:
       max-age: -1
       contexts:

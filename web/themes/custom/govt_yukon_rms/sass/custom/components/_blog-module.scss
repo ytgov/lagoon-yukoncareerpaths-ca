@@ -1,0 +1,55 @@
+//
+// Blogs Module.
+//
+.view-blogs {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .views-row {
+      border-radius: 5px;
+      box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.25);
+      box-sizing: border-box;
+      width: calc(50% - 1.25rem); /* Adjust the width based on the design */
+      margin-right: 2.5rem; /* Adjust the spacing between columns */
+      margin-bottom: 2.5rem; /* Adjust the spacing between rows */
+      padding: 2rem;
+      overflow: hidden;
+    }
+    
+    /* Clear the margin-right for the last item in each row */
+    .views-row:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+//
+// Blog Module Item.
+//
+
+.page-node-type-blog {
+  .blogs-listing-pg-title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .blog-article-published-date {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .author-bio {
+    display: flex;
+
+    .profile {
+      border-radius: 50%;
+      margin-right: 2rem;
+      overflow: hidden;
+
+      & + .node__submitted {
+        align-self: center;
+      }
+    }
+  }
+}
