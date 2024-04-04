@@ -1,23 +1,23 @@
-uuid: deeef78c-dd13-4c53-a22d-d6885e3bde1e
+uuid: d7a73654-aa16-43ab-99e0-abf4f43938a1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.paragraph.field_image
     - media.type.image
-    - node.type.blog
+    - paragraphs.paragraphs_type.blog_content_list_item
   module:
     - tmgmt_content
 third_party_settings:
   tmgmt_content:
     excluded: false
-id: node.blog.field_image
+id: paragraph.blog_content_list_item.field_image
 field_name: field_image
-entity_type: node
-bundle: blog
+entity_type: paragraph
+bundle: blog_content_list_item
 label: Image
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

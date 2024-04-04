@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a node.
+ * Node Theme: Blog.
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
@@ -79,30 +79,18 @@
 %}
 {{ attach_library('govt_yukon/node') }}
 <article{{ attributes.addClass(classes) }}>
-
-  <span class="blogs-listing-pg-title">Yukon Career Paths Blog</span>
-
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <span class="blog-article-published-date">{{ date }}</span>
-    <footer class="node__meta author-bio">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-  </div>
 
+    {% if display_submitted %}
+      <span class="blog-article-published-date">{{ date }}</span>
+      <footer class="node__meta author-bio">
+        {{ author_picture }}
+        <div{{ author_attributes.addClass('node__submitted') }}>
+          {{ author_name }}
+        </div>
+      </footer>
+    {% endif %}
+    
+    {{ content|without('field_page_banner', 'field_image') }}
+  </div>
 </article>

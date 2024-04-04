@@ -1,0 +1,10 @@
+uuid: 47fc89fc-01d0-49a0-8dc8-1083588c942f
+langcode: en
+status: true
+dependencies: {  }
+id: blog_content_list
+label: 'Blog Content List'
+icon_uuid: null
+icon_default: null
+description: 'Component: Display a list of blog content (text and images) using the Blog Content List Item components.'
+behavior_plugins: {  }

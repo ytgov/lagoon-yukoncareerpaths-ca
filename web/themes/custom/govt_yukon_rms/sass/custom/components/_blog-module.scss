@@ -7,14 +7,46 @@
     flex-wrap: wrap;
     
     .views-row {
-      border-radius: 5px;
+      border-radius: rem(5px);
       box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.25);
       box-sizing: border-box;
       width: calc(50% - 1.25rem); /* Adjust the width based on the design */
       margin-right: 2.5rem; /* Adjust the spacing between columns */
       margin-bottom: 2.5rem; /* Adjust the spacing between rows */
-      padding: 2rem;
       overflow: hidden;
+
+      .node__content {
+        & > *:not(.field--name-field-page-banner) {
+          padding: 0 2rem;
+
+          &:last-child {
+            padding-bottom: 2rem;
+          }
+        }
+      }
+
+      .field--name-field-page-banner {
+        margin-bottom: 0;
+        overflow: hidden;
+    
+        @include media-breakpoint-up(xl) {
+          height: rem(320px);
+
+          & > .slick-list {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        img {
+          display: flex;
+          width: auto;
+        }
+      }
+
+      .blog-article-published-date {
+        display: flex;
+      }
     }
     
     /* Clear the margin-right for the last item in each row */
@@ -30,12 +62,13 @@
 
 .page-node-type-blog {
   .blogs-listing-pg-title {
-    font-size: 22px;
+    font-size: rem(22px);
     font-weight: 400;
   }
 
   .blog-article-published-date {
-    font-size: 22px;
+    color: $c-neutral-60;
+    font-size: rem(22px);
     font-weight: 500;
   }
 
@@ -49,6 +82,34 @@
 
       & + .node__submitted {
         align-self: center;
+      }
+
+      img {
+        max-height: none;
+      }
+
+      .username {
+        font-size: rem(22px);
+      }
+    }
+  }
+
+  .field--name-field-image,
+  .field--name-field-page-banner {
+    background-color: #C4C4C4;
+    height: rem(450px);
+    overflow: hidden;
+    position: relative;
+
+    & > .media,
+    & > .slick-list {
+      min-height: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      & * {
+        min-height: 100%;
       }
     }
   }

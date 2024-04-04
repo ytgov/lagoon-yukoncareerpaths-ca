@@ -1,0 +1,10 @@
+uuid: ed7d6ada-40fa-43af-ba68-bacffbb8b383
+langcode: en
+status: true
+dependencies: {  }
+id: blog_content_list_item
+label: 'Blog Content List Item'
+icon_uuid: null
+icon_default: null
+description: 'Sub-Component for blog: Display text along with a portrait type image.'
+behavior_plugins: {  }

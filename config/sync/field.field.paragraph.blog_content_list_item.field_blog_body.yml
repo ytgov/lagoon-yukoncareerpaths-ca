@@ -1,0 +1,23 @@
+uuid: cb0823ff-78a0-4161-ba6e-4e764b0e3757
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blog_body
+    - paragraphs.paragraphs_type.blog_content_list_item
+  module:
+    - text
+id: paragraph.blog_content_list_item.field_blog_body
+field_name: field_blog_body
+entity_type: paragraph
+bundle: blog_content_list_item
+label: 'Blog Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

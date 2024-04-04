@@ -1,0 +1,99 @@
+uuid: 8ecdaab4-dd93-4856-aef3-c5805f4dae7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.blog
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.blog.field_components
+field_name: field_components
+entity_type: node
+bundle: blog
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      basic_content:
+        weight: 24
+        enabled: false
+      block_quote:
+        weight: 25
+        enabled: false
+      button:
+        weight: 26
+        enabled: false
+      buttons:
+        weight: 27
+        enabled: false
+      card:
+        weight: 28
+        enabled: false
+      cards:
+        weight: 29
+        enabled: false
+      career_profiles:
+        weight: 30
+        enabled: false
+      carousel:
+        weight: 31
+        enabled: false
+      carousel_slide:
+        weight: 32
+        enabled: false
+      community_profiles:
+        weight: 33
+        enabled: false
+      content_list:
+        weight: 34
+        enabled: false
+      content_list_item:
+        weight: 35
+        enabled: false
+      divider:
+        weight: 36
+        enabled: false
+      page_section:
+        weight: 37
+        enabled: false
+      quick_facts:
+        weight: 38
+        enabled: false
+      quick_facts_item:
+        weight: 39
+        enabled: false
+      rss_list:
+        weight: 40
+        enabled: false
+      section:
+        weight: 41
+        enabled: false
+      section_block:
+        weight: 42
+        enabled: false
+      spacer:
+        weight: 43
+        enabled: false
+      tab:
+        weight: 44
+        enabled: false
+      tabs:
+        weight: 45
+        enabled: false
+      webform:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions
