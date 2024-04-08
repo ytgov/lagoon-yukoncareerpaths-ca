@@ -80,8 +80,9 @@
 {{ attach_library('govt_yukon/node') }}
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-    <span class="blog-article-published-date">{{ date }}</span>
-    <a href="{{ url }}">{{ label }}</a>
+    {{ content|without('field_blog_date', 'field_tags') }}
+    <span class="blog-article-published-date">{{ content.field_blog_date }}</span>
+    <a href="{{ url }}" class="blog-title">{{ label }}</a>
+    <span class="blog-tags">{{ content.field_tags }}</span>
   </div>
 </article>

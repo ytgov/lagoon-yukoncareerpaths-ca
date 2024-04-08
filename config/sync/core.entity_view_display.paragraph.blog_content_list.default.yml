@@ -1,0 +1,33 @@
+uuid: 18f24c44-b13f-42fa-b294-4c9853b05809
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blog_content_list.field_blog_content_list_items
+    - field.field.paragraph.blog_content_list.field_blog_content_list_style
+    - paragraphs.paragraphs_type.blog_content_list
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.blog_content_list.default
+targetEntityType: paragraph
+bundle: blog_content_list
+mode: default
+content:
+  field_blog_content_list_items:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_blog_content_list_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

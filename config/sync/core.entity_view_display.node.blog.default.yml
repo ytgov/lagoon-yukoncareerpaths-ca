@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.blog.field_blog_date
     - field.field.node.blog.field_components
     - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_page_banner
@@ -10,6 +11,7 @@ dependencies:
     - field.field.node.blog.simplenews_issue
     - node.type.blog
   module:
+    - datetime
     - entity_reference_revisions
     - field_group
     - media
@@ -46,6 +48,15 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_blog_date:
+    type: datetime_custom
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F d, o'
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_components:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -53,14 +64,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_page_banner:
     type: media_thumbnail

@@ -82,15 +82,17 @@
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% if display_submitted %}
-      <span class="blog-article-published-date">{{ date }}</span>
+      <span class="blog-article-published-date">{{ content.field_blog_date }}</span>
+
       <footer class="node__meta author-bio">
         {{ author_picture }}
         <div{{ author_attributes.addClass('node__submitted') }}>
           {{ author_name }}
         </div>
+        {{ content.group_author_social }}
       </footer>
     {% endif %}
     
-    {{ content|without('field_page_banner', 'field_image') }}
+    {{ content|without('field_page_banner', 'field_image', 'group_author_social', 'field_blog_date') }}
   </div>
 </article>
