@@ -6,15 +6,23 @@ dependencies:
     - field.storage.paragraph.field_blog_body
     - paragraphs.paragraphs_type.blog_content_list_item
   module:
+    - allowed_formats
     - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - full_html
+  tmgmt_content:
+    excluded: false
 id: paragraph.blog_content_list_item.field_blog_body
 field_name: field_blog_body
 entity_type: paragraph
 bundle: blog_content_list_item
 label: 'Blog Body'
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,9 +1,9 @@
-uuid: 52fb7b1a-16df-4ba2-b74a-0aff3b4868c4
+uuid: ed33533a-0e02-40bb-aa53-628345510fac
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.blog_tags
+    - paragraphs.paragraphs_type.blog_content_list_item
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.blog_tags
-target_entity_type_id: taxonomy_term
-target_bundle: blog_tags
+id: paragraph.blog_content_list_item
+target_entity_type_id: paragraph
+target_bundle: blog_content_list_item
 default_langcode: site_default
 language_alterable: true

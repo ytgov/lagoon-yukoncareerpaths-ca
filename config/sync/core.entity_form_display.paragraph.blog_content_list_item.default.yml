@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.blog_content_list_item.field_image_alignment
     - paragraphs.paragraphs_type.blog_content_list_item
   module:
+    - media_library
     - text
 id: paragraph.blog_content_list_item.default
 targetEntityType: paragraph
@@ -34,14 +35,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_image:
-    type: entity_reference_autocomplete
+    type: media_library_widget
     weight: 2
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
   field_image_alignment:
     type: options_select

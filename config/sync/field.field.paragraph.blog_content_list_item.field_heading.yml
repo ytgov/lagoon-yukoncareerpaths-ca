@@ -5,14 +5,19 @@ dependencies:
   config:
     - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.blog_content_list_item
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 id: paragraph.blog_content_list_item.field_heading
 field_name: field_heading
 entity_type: paragraph
 bundle: blog_content_list_item
 label: Heading
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

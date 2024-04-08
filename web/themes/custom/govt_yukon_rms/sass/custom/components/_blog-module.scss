@@ -163,6 +163,10 @@
     overflow: hidden;
     position: relative;
 
+    & > img {
+      width: 100%;
+    }
+
     & > .media,
     & > .slick-list {
       min-height: 100%;

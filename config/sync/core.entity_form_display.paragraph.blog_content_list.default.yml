@@ -18,18 +18,19 @@ content:
     weight: 0
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
+      title: 'Blog Content List Item'
+      title_plural: 'Blog Content List Items'
+      edit_mode: closed
       closed_mode: summary
-      autocollapse: none
+      autocollapse: all
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: blog_content_list_item
       features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
+        add_above: '0'
+        collapse_edit_all: '0'
+        duplicate: '0'
     third_party_settings: {  }
   field_blog_content_list_style:
     type: options_select
