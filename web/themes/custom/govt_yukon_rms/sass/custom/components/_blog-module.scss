@@ -8,7 +8,7 @@
     
     .views-row {
       border-radius: rem(5px);
-      box-shadow: 0 0 rem(6px) rgba($color: #000000, $alpha: 0.25);
+      box-shadow: 0 0 rem(6px) rgba($color: #000, $alpha: .25);
       box-sizing: border-box;
       width: calc(50% - 1.25rem); /* Adjust the width based on the design */
       margin-right: 2.5rem; /* Adjust the spacing between columns */
@@ -75,7 +75,7 @@
         .field--name-field-tags .field__item {
           display: inline-block;
 
-          &:not(:last-child):after {
+          &:not(:last-child)::after {
             content: ',';
           }
 
@@ -85,7 +85,7 @@
         }
       }
     }
-    
+
     /* Clear the margin-right for the last item in each row */
     .views-row:nth-child(2n) {
       margin-right: 0;
@@ -174,7 +174,7 @@
       top: 50%;
       transform: translateY(-50%);
 
-      & * {
+      * {
         min-height: 100%;
       }
     }
