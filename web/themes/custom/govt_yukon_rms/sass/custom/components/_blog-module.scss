@@ -30,7 +30,7 @@
       .field--name-field-page-banner {
         margin-bottom: 0;
         overflow: hidden;
-    
+
         @include media-breakpoint-up(xl) {
           height: rem(320px);
 
@@ -54,7 +54,7 @@
         padding-bottom: rem(24px);
         position: relative;
 
-        &:after {
+        &::after {
           border-bottom: 1px solid $c-neutral-20;
           bottom: 0;
           content: '';
@@ -167,7 +167,6 @@
       width: 100%;
     }
 
-    & > .media,
     & > .slick-list {
       min-height: 100%;
       position: absolute;
