@@ -40,6 +40,7 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if title %}
@@ -63,34 +64,47 @@
     </div>
   {% endif %}
 
-  {% if rows %}
-    <div class="view-content blog-list__container container g-0">
-      <div class="row gx-5">
-        <div class="col-lg-4 col-xl-3">
+  {# Blog List. #}
+  <div class="view-content blog-list__container container g-0">
+    <div class="row gx-5">
+      <div class="col-lg-4 col-xl-3">
+        {# Mobile Blog Filters Toggle. #}
+        <div class="blog-list__mobile-filters-toggle">
+          <button class="blog-list__mobile-filters-toggle__button btn btn--secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-mobile-blog-filters" aria-controls="offcanvas-mobile-blog-filters">
+            {{ 'Blog Filters'|t }}
+            <i class="far fa-list blog-list__mobile-filters-toggle__button__icon" aria-hidden="true"></i>
+          </button>
+        </div>
+        {# Desktop Blog Filters. #}
+        <div class="blog-list__filters blog-list__filters--desktop">
           {{ 'TODO: Insert filters into the template here.' }}
-          {{ drupal_entity('block', 'simplenewssubscription', check_access=false) }}
         </div>
-        <div class="col-lg-8 col-xl-9">
+        {# Subscribe Block. #}
+        {{ drupal_entity('block', 'simplenewssubscription', check_access=false) }}
+      </div>
+      <div class="col-lg-8 col-xl-9">
+        {% if rows %}
           {{ rows }}
-          {% elseif empty %}
-            <div class="view-empty">
-              {{ empty }}
-            </div>
-          {% endif %}
-          {% if pager %}
-            {{ pager }}
-          {% endif %}
-          {% if attachment_after %}
-            <div class="attachment attachment-after">
-              {{ attachment_after }}
-            </div>
-          {% endif %}
-          {% if more %}
-            {{ more }}
-          {% endif %}
-        </div>
+        {% elseif empty %}
+          <div class="view-empty">
+            {{ empty }}
+          </div>
+        {% endif %}
+        {% if pager %}
+          {{ pager }}
+        {% endif %}
+        {% if attachment_after %}
+          <div class="attachment attachment-after">
+            {{ attachment_after }}
+          </div>
+        {% endif %}
+        {% if more %}
+          {{ more }}
+        {% endif %}
       </div>
     </div>
+  </div>
+  {# / Blog List. #}
 
   {% if footer %}
     <div class="view-footer">

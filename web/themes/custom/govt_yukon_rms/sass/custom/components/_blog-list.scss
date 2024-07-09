@@ -91,3 +91,29 @@
     }
   }
 }
+
+// Filter button.
+.blog-list__mobile-filters-toggle {
+  display: block;
+  margin-bottom: rem(36px);
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.blog-list__mobile-filters-toggle__button__icon {
+  margin-left: rem(8px);
+}
+
+// Filters.
+.blog-list__filters {
+  display: block;
+
+  &.blog-list__filters--desktop {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}
