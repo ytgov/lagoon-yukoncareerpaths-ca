@@ -8,6 +8,7 @@ dependencies:
   module:
     - node
     - user
+    - views_infinite_scroll
 id: blogs
 label: Blogs
 module: views
@@ -72,10 +73,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: infinite_scroll
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 4
           total_pages: null
           id: 0
           tags:
@@ -89,6 +90,10 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load more'
+            automatically_load_content: false
+            initially_load_all_pages: false
       exposed_form:
         type: basic
         options:
@@ -161,6 +166,10 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_ajax: true
+      use_more: false
+      use_more_always: true
+      use_more_text: more
       header:
         area:
           id: area

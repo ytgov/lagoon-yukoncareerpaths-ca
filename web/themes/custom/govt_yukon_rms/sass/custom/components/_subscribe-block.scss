@@ -1,0 +1,62 @@
+//
+// Newsletter Subscribe Block.
+//
+
+.block-simplenews-subscription-block {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .27);
+  border-bottom: 10px solid $c-tertiary;
+  padding: 0;
+  margin-bottom: 2.5rem;
+
+  // Title.
+  h2 {
+    padding: rem(18px 25px);
+    margin: 0;
+    background-color: $c-tertiary;
+    font-size: $fs-h5;
+  }
+
+  // Form.
+  form {
+    padding: rem(18px 25px);
+
+    // Fields.
+    .form-item {
+      margin-bottom: rem(16px);
+    }
+
+    .form-control {
+      width: 100%;
+    }
+
+    .help-block {
+      display: none;
+    }
+
+    // Message.
+    .form-item-message {
+      margin-top: 0;
+      font-size: $fs-base;
+    }
+
+    // Actions.
+    .form-actions {
+      margin: 0;
+    }
+
+    input[type="submit"] {
+      margin-right: rem(16px);
+      text-align: center;
+
+      @include media-breakpoint-up(lg) {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    // Manage subscription button.
+    #edit-manage {
+      font-size: $fs-base;
+    }
+  }
+}

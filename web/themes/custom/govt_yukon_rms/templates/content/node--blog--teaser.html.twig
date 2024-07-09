@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Node Theme: Blog.
+ * Node Theme: Blog "Teaser".
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
@@ -67,22 +67,43 @@
  *
  */
 #}
+{% set component_prefix = 'comp-card' %}
+
+{# Image. #}
+{% set blog_image_path = '/' ~ directory ~ '/images/blog-placeholder.jpg' %}
+{% set blog_image_alt = node.title.value %}
+
+{% if node.field_page_banner.0.entity.field_media_image.0.entity.fileuri %}
+  {% set blog_image %}
+    {{ drupal_image(node.field_page_banner.0.entity.field_media_image.0.entity.fileuri, 'card_image', {alt: blog_image_alt}) }}
+  {% endset %}
+{% else %}
+  {% set blog_image %}
+    <img src="{{ blog_image_path }}" width="696" height="480" alt="{{ blog_image_alt }}" />
+  {% endset %}
+{% endif %}
+
 {%
   set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class
+]
 %}
-{{ attach_library('govt_yukon/node') }}
-<article{{ attributes.addClass(classes) }}>
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_blog_date', 'field_tags') }}
-    <span class="blog-article-published-date">{{ content.field_blog_date }}</span>
-    <a href="{{ url }}" class="blog-title">{{ label }}</a>
-    <span class="blog-tags">{{ content.field_tags }}</span>
+<div{{ attributes.addClass(classes) }}>
+  <div href="{{ url }}" class="{{ component_prefix }} {{ component_prefix ~ '--image' }}">
+    <a href="{{ url }}" class="{{ component_prefix ~ '__link-wrapper' }}">
+      <div class="{{ component_prefix ~ '__image' }}">
+        {{ blog_image }}
+      </div>
+      <div class="{{ component_prefix ~ '__text' }}">
+        {{ content.field_blog_date }}
+        {{ label }}
+      </div>
+    </a>
+    {{ content.field_tags }}
   </div>
-</article>
+</div>

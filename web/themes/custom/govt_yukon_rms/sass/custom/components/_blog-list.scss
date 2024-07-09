@@ -1,0 +1,93 @@
+//
+// Blog List Page.
+//
+
+.view-blogs {
+  // Layout.
+  .views-infinite-scroll-content-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 2.5rem;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: calc(50% - 1.25rem) calc(50% - 1.25rem);
+    }
+
+    .node--type-blog.node--view-mode-teaser {
+      height: 100%;
+    }
+  }
+
+  // Card.
+  .comp-card {
+    text-align: left;
+    overflow: hidden;
+  }
+
+  a.comp-card__link-wrapper {
+    color: $c-body;
+    text-decoration: none;
+
+    &:visited {
+      color: $c-body;
+    }
+
+    &:hover,
+    &:focus {
+      color: $c-body;
+      text-decoration: none;
+
+      .comp-icon-card__text {
+        color: $c-link-hover;
+      }
+    }
+  }
+
+  .comp-card__text {
+    width: 100%;
+    max-width: unset;
+    padding-bottom: rem(20px);
+    text-decoration: none;
+  }
+
+  // Date field.
+  .field--name-field-blog-date {
+    font-size: $fs-base;
+    font-weight: $font-weight-light;
+    margin-bottom: rem(8px);
+  }
+
+  // Title.
+  .field--name-title {
+    text-decoration: underline;
+  }
+
+  // Tags.
+  .field--name-field-tags {
+    position: relative;
+    padding: rem(0 20px 30px 20px);
+
+    &::before {
+      content: '';
+      display: block;
+      border-top: 1px solid $border-color;
+      margin-bottom: rem(36px);
+    }
+
+    .field__item {
+      display: inline-block;
+      font-size: $fs-base;
+      font-weight: $font-weight-light;
+
+      &::after {
+        content: ', ';
+        display: inline-block;
+        margin-right: 2px;
+      }
+
+      &:last-of-type::after {
+        content: '';
+      }
+    }
+  }
+}
