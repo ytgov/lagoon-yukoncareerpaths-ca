@@ -69,6 +69,7 @@
 #}
 {%
   set classes = [
+    'blog-post',
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
@@ -80,19 +81,43 @@
 {{ attach_library('govt_yukon/node') }}
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content') }}>
-
-    {% if display_submitted %}
-      <span class="blog-article-published-date">{{ content.field_blog_date }}</span>
-
-      <footer class="node__meta author-bio">
-        {{ author_picture }}
-        <div{{ author_attributes.addClass('node__submitted') }}>
-          {{ author_name }}
+    {# Blog Meta. #}
+    <div class="blog-post__meta container g-0">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-xs-12 col-md-auto">
+          <div class="author">
+            {% set author_picture_uri = node.getOwner.user_picture|file_uri %}
+            {% if author_picture_uri is not null %}
+              <div class="author__picture" style="background-image: url({{ author_picture_uri|image_style('thumbnail') }})"></div>
+            {% endif %}
+            {% if node.getOwner.name.value %}
+              <div class="author__info">
+                <div class="author__info__name">
+                  {{ node.getOwner.name.value }}
+                </div>
+                {% if node.getOwner.field_role.value %}
+                  <div class="author__info__role">
+                    {{ node.getOwner.field_role.value }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
         </div>
-        {{ content.group_author_social }}
-      </footer>
-    {% endif %}
-    
-    {{ content|without('field_page_banner', 'field_image', 'group_author_social', 'field_blog_date') }}
+        <div class="col-xs-12 col-md-auto">
+          <div class="blog-post__meta__share-title">
+            {{ "Share this page"|t }}
+          </div>
+          <div class="blog-post__meta__share">
+            {{ content.group_author_social }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {# / Blog Meta. #}
+
+    <div class="view-content blog-list__container">
+      {{ content.field_components }}
+    </div>
   </div>
 </article>

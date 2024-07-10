@@ -9,13 +9,13 @@ dependencies:
     - field.field.node.blog.field_page_banner
     - field.field.node.blog.field_tags
     - field.field.node.blog.simplenews_issue
+    - image.style.page_banner
     - node.type.blog
   module:
     - datetime
-    - entity_reference_revisions
     - field_group
+    - layout_paragraphs
     - media
-    - metatag
     - user
 third_party_settings:
   field_group:
@@ -28,10 +28,10 @@ third_party_settings:
       weight: 2
       format_type: html_element
       format_settings:
-        classes: author-and-social
+        classes: ''
         show_empty_fields: false
         id: ''
-        element: section
+        element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
@@ -53,12 +53,12 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'F d, o'
+      date_format: 'F j, o'
     third_party_settings: {  }
     weight: 1
     region: content
   field_components:
-    type: entity_reference_revisions_entity_view
+    type: layout_paragraphs
     label: hidden
     settings:
       view_mode: default
@@ -66,27 +66,28 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_meta_tags:
-    type: metatag_empty_formatter
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_page_banner:
     type: media_thumbnail
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: page_banner
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
+  field_tags:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
 hidden:
   content_moderation_control: true
-  field_tags: true
+  field_meta_tags: true
   langcode: true
   links: true
   simplenews_issue: true

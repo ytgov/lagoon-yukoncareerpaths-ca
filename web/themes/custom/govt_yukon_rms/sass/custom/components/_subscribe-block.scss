@@ -55,7 +55,7 @@
     }
 
     // Manage subscription button.
-    #edit-manage {
+    a[id^="edit-manage"] {
       font-size: $fs-base;
     }
   }

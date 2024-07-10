@@ -3,93 +3,160 @@
 //
 
 .page-node-type-blog {
-  .blogs-listing-pg-title {
-    font-size: rem(22px);
-    font-weight: 400;
+  // Remove paragraph layout gutters.
+  .layout-section > .container {
+    padding-right: 0;
+    padding-left: 0;
   }
 
-  .blog-article-published-date {
-    color: $c-neutral-60;
-    display: flex;
-    font-size: rem(22px);
-    font-weight: 500;
-    margin: rem(16px) 0 rem(32px);
+  // Banner.
+  .comp-page-banner,
+  .slick-slider.slick-dotted {
+    margin-bottom: rem(32px);
   }
 
-  .author-bio {
-    align-items: center;
-    border: 1px solid $c-neutral-20;
-    border-left-width: 0;
-    border-right-width: 0;
-    display: flex;
-    margin-bottom: rem(48px);
-
-    .profile {
-      border-radius: 50%;
-      margin: rem(16px) rem(32px) rem(16px) 0;
-      overflow: hidden;
-
-      & + .node__submitted {
-        align-self: center;
-      }
-
-      img {
-        max-height: none;
-      }
-
-      .username {
-        font-size: rem(22px);
-      }
-    }
-
-    .author-and-social {
-      margin-left: auto;
-
-      *[class*="a2a_dd"],
-      *[class*="a2a_button"] {
-        .a2a_svg {
-          background-color: $c-btn !important;
-          height: rem(40px);
-          width: rem(40px);
-        }
-      }
-    }
-  }
-
-  .comp-page-banner {
-    margin: 0;
-  }
-
-  .field--name-field-image,
-  .field--name-field-page-banner {
-    background-color: $c-neutral-20;
-    height: rem(450px);
-    margin: 0;
-    overflow: hidden;
-    position: relative;
-
-    & > img {
-      width: 100%;
-    }
-
-    & > .slick-list {
-      min-height: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-
-      * {
-        min-height: 100%;
-      }
-    }
+  // Header.
+  .blog-post-header {
+    margin-bottom: rem(24px);
   }
 
   .page-title-header {
-    margin: 0;
+    margin-bottom: rem(18px);
+  }
 
-    .h-overline {
-      margin-bottom: rem(16px);
-      margin-top: rem(32px);
+  .field--name-field-blog-date {
+      color: $c-neutral-60;
+      font-size: $fs-overline;
+      font-weight: 500;
+  }
+
+  // Meta Information.
+  .blog-post__meta {
+    padding: rem(16px 0);
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: rem(36px);
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+  }
+
+  .author__picture {
+    width: 60px;
+    height: 60px;
+    margin-right: rem(24px);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .author__info__name {
+    font-size: $fs-h5;
+    font-weight: 500;
+  }
+
+  .author__info__role {
+    font-size: rem(14px);
+  }
+
+  .blog-post__meta__share-title {
+    display: block;
+    margin-top: rem(16px);
+
+    @include media-breakpoint-up(md) {
+      display: none;
     }
   }
+
+  //.blogs-listing-pg-title {
+  //  font-size: rem(22px);
+  //  font-weight: 400;
+  //}
+  //
+  //.blog-article-published-date {
+  //  color: $c-neutral-60;
+  //  display: flex;
+  //  font-size: rem(22px);
+  //  font-weight: 500;
+  //  margin: rem(16px) 0 rem(32px);
+  //}
+  //
+  //.author-bio {
+  //  align-items: center;
+  //  border: 1px solid $c-neutral-20;
+  //  border-left-width: 0;
+  //  border-right-width: 0;
+  //  display: flex;
+  //  margin-bottom: rem(48px);
+  //
+  //  .profile {
+  //    border-radius: 50%;
+  //    margin: rem(16px) rem(32px) rem(16px) 0;
+  //    overflow: hidden;
+  //
+  //    & + .node__submitted {
+  //      align-self: center;
+  //    }
+  //
+  //    img {
+  //      max-height: none;
+  //    }
+  //
+  //    .username {
+  //      font-size: rem(22px);
+  //    }
+  //  }
+  //
+  //  .author-and-social {
+  //    margin-left: auto;
+  //
+  //    *[class*="a2a_dd"],
+  //    *[class*="a2a_button"] {
+  //      .a2a_svg {
+  //        background-color: $c-btn !important;
+  //        height: rem(40px);
+  //        width: rem(40px);
+  //      }
+  //    }
+  //  }
+  //}
+  //
+  //.comp-page-banner {
+  //  margin: 0;
+  //}
+  //
+  //.field--name-field-image,
+  //.field--name-field-page-banner {
+  //  background-color: $c-neutral-20;
+  //  height: rem(450px);
+  //  margin: 0;
+  //  overflow: hidden;
+  //  position: relative;
+  //
+  //  & > img {
+  //    width: 100%;
+  //  }
+  //
+  //  & > .slick-list {
+  //    min-height: 100%;
+  //    position: absolute;
+  //    top: 50%;
+  //    transform: translateY(-50%);
+  //
+  //    * {
+  //      min-height: 100%;
+  //    }
+  //  }
+  //}
+  //
+  //.page-title-header {
+  //  margin: 0;
+  //
+  //  .h-overline {
+  //    margin-bottom: rem(16px);
+  //    margin-top: rem(32px);
+  //  }
+  //}
 }

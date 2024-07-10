@@ -5,6 +5,22 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.blog
+    - paragraphs.paragraphs_type.basic_content
+    - paragraphs.paragraphs_type.block_quote
+    - paragraphs.paragraphs_type.buttons
+    - paragraphs.paragraphs_type.cards
+    - paragraphs.paragraphs_type.career_profiles
+    - paragraphs.paragraphs_type.carousel
+    - paragraphs.paragraphs_type.community_profiles
+    - paragraphs.paragraphs_type.content_list
+    - paragraphs.paragraphs_type.divider
+    - paragraphs.paragraphs_type.quick_facts
+    - paragraphs.paragraphs_type.rss_list
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.section_block
+    - paragraphs.paragraphs_type.spacer
+    - paragraphs.paragraphs_type.tabs
+    - paragraphs.paragraphs_type.webform
   module:
     - entity_reference_revisions
     - tmgmt_content
@@ -24,76 +40,98 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      basic_content: basic_content
+      cards: cards
+      section: section
+      carousel: carousel
+      block_quote: block_quote
+      buttons: buttons
+      career_profiles: career_profiles
+      community_profiles: community_profiles
+      content_list: content_list
+      divider: divider
+      spacer: spacer
+      quick_facts: quick_facts
+      tabs: tabs
+      webform: webform
+      rss_list: rss_list
+      section_block: section_block
     negate: 0
     target_bundles_drag_drop:
       basic_content:
-        weight: 24
-        enabled: false
+        weight: -51
+        enabled: true
       block_quote:
-        weight: 25
+        weight: -47
+        enabled: true
+      blog_content_list:
+        weight: -44
+        enabled: false
+      blog_content_list_item:
+        weight: -42
         enabled: false
       button:
-        weight: 26
+        weight: -46
         enabled: false
       buttons:
-        weight: 27
-        enabled: false
+        weight: -45
+        enabled: true
       card:
-        weight: 28
+        weight: -43
         enabled: false
       cards:
-        weight: 29
-        enabled: false
+        weight: -50
+        enabled: true
       career_profiles:
-        weight: 30
-        enabled: false
+        weight: -41
+        enabled: true
       carousel:
-        weight: 31
-        enabled: false
+        weight: -48
+        enabled: true
       carousel_slide:
-        weight: 32
+        weight: -40
         enabled: false
       community_profiles:
-        weight: 33
-        enabled: false
+        weight: -39
+        enabled: true
       content_list:
-        weight: 34
-        enabled: false
+        weight: -38
+        enabled: true
       content_list_item:
-        weight: 35
+        weight: -37
         enabled: false
       divider:
-        weight: 36
-        enabled: false
+        weight: -36
+        enabled: true
       page_section:
-        weight: 37
+        weight: -34
         enabled: false
       quick_facts:
-        weight: 38
-        enabled: false
+        weight: -33
+        enabled: true
       quick_facts_item:
-        weight: 39
+        weight: -32
         enabled: false
       rss_list:
-        weight: 40
-        enabled: false
+        weight: -29
+        enabled: true
       section:
-        weight: 41
-        enabled: false
+        weight: -49
+        enabled: true
       section_block:
-        weight: 42
-        enabled: false
+        weight: -28
+        enabled: true
       spacer:
-        weight: 43
-        enabled: false
+        weight: -35
+        enabled: true
       tab:
-        weight: 44
+        weight: -27
         enabled: false
       tabs:
-        weight: 45
-        enabled: false
+        weight: -31
+        enabled: true
       webform:
-        weight: 46
-        enabled: false
+        weight: -30
+        enabled: true
 field_type: entity_reference_revisions
