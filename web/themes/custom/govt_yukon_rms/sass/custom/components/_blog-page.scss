@@ -3,6 +3,20 @@
 //
 
 .page-node-type-blog {
+  .site-sidebar {
+    // Unhide sitebars for mobile.
+    @include media-breakpoint-down(lg) {
+      display: block;
+      padding: rem(36px) 0 0;
+      margin-top: rem(36px);
+      border-top: 1px solid $border-color;
+    }
+
+    .region > .block {
+      margin-bottom: rem(36px);
+    }
+  }
+
   // Remove paragraph layout gutters.
   .layout-section > .container {
     padding-right: 0;
