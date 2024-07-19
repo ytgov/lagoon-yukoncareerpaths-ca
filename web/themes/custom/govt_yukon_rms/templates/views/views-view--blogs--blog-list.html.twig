@@ -53,11 +53,6 @@
     </div>
   {% endif %}
   <div class="comp-divider"></div>
-  {% if exposed %}
-    <div class="view-filters">
-      {{ exposed }}
-    </div>
-  {% endif %}
   {% if attachment_before %}
     <div class="attachment attachment-before">
       {{ attachment_before }}
@@ -68,17 +63,22 @@
   <div class="view-content blog-list__container container g-0">
     <div class="row gx-5">
       <div class="col-lg-4 col-xl-3">
-        {# Mobile Blog Filters Toggle. #}
-        <div class="blog-list__mobile-filters-toggle">
-          <button class="blog-list__mobile-filters-toggle__button btn btn--secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-mobile-blog-filters" aria-controls="offcanvas-mobile-blog-filters">
-            {{ 'Blog Filters'|t }}
-            <i class="far fa-list blog-list__mobile-filters-toggle__button__icon" aria-hidden="true"></i>
-          </button>
-        </div>
-        {# Desktop Blog Filters. #}
-        <div class="blog-list__filters blog-list__filters--desktop">
-          {{ 'TODO: Insert filters into the template here.' }}
-        </div>
+        {# Blog Filters. #}
+        {% if exposed %}
+          <div class="blog-list__mobile-filters-toggle">
+            <button class="blog-list__mobile-filters-toggle__button btn btn--secondary">
+              {{ 'Blog Filters'|t }}
+              <i class="far fa-list blog-list__mobile-filters-toggle__button__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="blog-list__filters">
+            <div class="view-filters">
+              {{ exposed }}
+            </div>
+          </div>
+        {% endif %}
+
         {# Subscribe Block. #}
         {{ drupal_entity('block', 'simplenewssubscription', check_access=false) }}
       </div>

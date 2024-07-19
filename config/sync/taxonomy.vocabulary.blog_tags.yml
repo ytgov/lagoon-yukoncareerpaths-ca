@@ -2,7 +2,7 @@ uuid: 918ecfca-d0a8-4cbb-981f-faaf079e6c1d
 langcode: en
 status: true
 dependencies: {  }
-name: 'Blog tags'
+name: 'Blog Tags'
 vid: blog_tags
-description: ''
+description: 'Additional tags related blog articles.'
 weight: 0

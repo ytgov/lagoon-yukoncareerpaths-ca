@@ -63,7 +63,7 @@
   }
 
   // Tags.
-  .field--name-field-tags {
+  .field--name-field-blog-categories {
     position: relative;
     padding: rem(0 20px 30px 20px);
 
@@ -92,7 +92,7 @@
   }
 }
 
-// Filter button.
+// Mobile toggle filter button.
 .blog-list__mobile-filters-toggle {
   display: block;
   margin-bottom: rem(36px);
@@ -111,9 +111,87 @@
 .blog-list__filters {
   display: block;
 
-  &.blog-list__filters--desktop {
-    @include media-breakpoint-down(lg) {
-      display: none;
+  @include media-breakpoint-down(lg) {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease;
+
+    &.blog-list__filters--show-all {
+      max-height: 2000px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // Wrapper.
+  // Using important to get around Better Exposed Filters default styles.
+  fieldset {
+    float: none !important;
+    display: block;
+    margin: 0 0 rem(36px) !important;
+    padding: 0 0 rem(4px);
+    border-bottom: 1px solid $border-color;
+  }
+
+  // Title.
+  .fieldset-legend {
+    font-size: $fs-h4;
+    margin: 0 0 rem(4px);
+    padding: 0 0 rem(20px);
+    border-bottom: 1px solid $border-color;
+  }
+
+  // Checkboxes.
+  .form-type-checkbox {
+    display: none;
+    width: 100%;
+    margin: rem(12px) 0;
+
+    // Show the first x number.
+    &:nth-child(n+1):nth-child(-n+12) {
+      display: inline-block;
+    }
+
+    label {
+      min-height: 24px;
+      padding: 0 0 0 rem(40px);
+      font-size: $fs-base;
+
+      &::before {
+        width: 22px;
+        height: 22px;
+      }
+
+      &::after {
+        font-size: $fs-base;
+      }
+    }
+  }
+
+  // Show more/less.
+  // Added via javascript in global.js.
+  .blog-list__filters__more {
+    display: inline-block;
+    position: relative;
+    margin: rem(12px) 0 rem(12px) rem(16px);
+    font-size: $fs-base;
+    cursor: pointer;
+
+    &::before {
+      content: '+';
+      display: inline-block;
+      margin-right: rem(8px);
+    }
+  }
+
+  .fieldset-wrapper--show-all {
+    .form-type-checkbox {
+      display: inline-block !important;
+    }
+
+    .blog-list__filters__more::before {
+      content: '-';
     }
   }
 }

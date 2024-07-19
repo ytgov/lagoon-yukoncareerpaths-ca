@@ -1,12 +1,12 @@
-uuid: 6d9227a8-d0bb-4ea9-922c-aaba653ed5d6
+uuid: 70464bdf-f08a-4303-b414-045a97140331
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
-id: node.field_tags
-field_name: field_tags
+id: node.field_blog_categories
+field_name: field_blog_categories
 entity_type: node
 type: entity_reference
 settings:

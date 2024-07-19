@@ -3,11 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.blog.field_blog_categories
     - field.field.node.blog.field_blog_date
     - field.field.node.blog.field_components
     - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_page_banner
-    - field.field.node.blog.field_tags
     - field.field.node.blog.simplenews_issue
     - node.type.blog
     - workflows.workflow.editorial
@@ -28,7 +28,7 @@ third_party_settings:
       label: 'Page Banner'
       region: content
       parent_name: ''
-      weight: 14
+      weight: 13
       format_type: details
       format_settings:
         classes: ''
@@ -37,15 +37,15 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
-    group_blog_settings:
+    group_categorization:
       children:
         - field_blog_date
-        - field_tags
         - simplenews_issue
+        - field_blog_categories
       label: 'Blog Settings'
       region: content
       parent_name: ''
-      weight: 13
+      weight: 12
       format_type: details
       format_settings:
         classes: ''
@@ -65,6 +65,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_blog_categories:
+    type: options_buttons
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_blog_date:
     type: datetime_default
     weight: 10
@@ -73,7 +79,7 @@ content:
     third_party_settings: {  }
   field_components:
     type: layout_paragraphs
-    weight: 15
+    weight: 14
     region: content
     settings:
       preview_view_mode: default
@@ -83,7 +89,7 @@ content:
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 18
+    weight: 17
     region: content
     settings:
       sidebar: true
@@ -96,16 +102,6 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 11
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 0
@@ -115,7 +111,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -139,13 +135,13 @@ content:
     third_party_settings: {  }
   simplenews_issue:
     type: simplenews_issue
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 17
+    weight: 16
     region: content
     settings:
       display_label: true

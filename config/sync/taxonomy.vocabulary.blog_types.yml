@@ -1,0 +1,8 @@
+uuid: 2a917830-4b75-4f9e-954d-d45f7b222194
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Types'
+vid: blog_types
+description: 'Types of content related blog articles.'
+weight: 0

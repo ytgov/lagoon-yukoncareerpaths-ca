@@ -1,0 +1,16 @@
+uuid: b3a6ac21-d9ee-4911-b7b7-a39da3147d3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_types
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.blog_types
+target_entity_type_id: taxonomy_term
+target_bundle: blog_types
+default_langcode: site_default
+language_alterable: true

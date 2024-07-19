@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.blog.field_blog_categories
     - field.field.node.blog.field_blog_date
     - field.field.node.blog.field_components
     - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_page_banner
-    - field.field.node.blog.field_tags
     - field.field.node.blog.simplenews_issue
     - node.type.blog
   module:
@@ -19,6 +19,14 @@ targetEntityType: node
 bundle: blog
 mode: teaser
 content:
+  field_blog_categories:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_blog_date:
     type: datetime_custom
     label: hidden
@@ -27,14 +35,6 @@ content:
       date_format: 'F d, o'
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_tags:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden:
   addtoany: true
