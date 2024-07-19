@@ -15,6 +15,7 @@
           const checkboxesWrapper = element.querySelectorAll('.fieldset-wrapper')[0];
           const numOfCheckboxes = element.querySelectorAll('.form-type-checkbox').length;
           const moreButtonLabel = Drupal.t('Show more');
+          const lessButtonLabel = Drupal.t('Show less');
 
           if (numOfCheckboxes > 12) {
             // Add create more button.
@@ -29,9 +30,11 @@
             moreButtonElement.addEventListener("click", function() {
               if (checkboxesWrapper.classList.contains('fieldset-wrapper--show-all')) {
                 checkboxesWrapper.classList.remove('fieldset-wrapper--show-all');
+                moreButtonElement.innerHTML = moreButtonLabel;
               }
               else {
                 checkboxesWrapper.classList.add('fieldset-wrapper--show-all');
+                moreButtonElement.innerHTML = lessButtonLabel;
               }
             });
 
@@ -39,9 +42,11 @@
               if (event.key === "Enter") {
                 if (checkboxesWrapper.classList.contains('fieldset-wrapper--show-all')) {
                   checkboxesWrapper.classList.remove('fieldset-wrapper--show-all');
+                  moreButtonElement.innerHTML = moreButtonLabel;
                 }
                 else {
                   checkboxesWrapper.classList.add('fieldset-wrapper--show-all');
+                  moreButtonElement.innerHTML = lessButtonLabel;
                 }
               }
             });
