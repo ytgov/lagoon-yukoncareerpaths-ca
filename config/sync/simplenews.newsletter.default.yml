@@ -4,9 +4,9 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: wg5cCxB554rXZx4TIzUACcXRXe-VSodwqcq-_QS4Tv0
-name: 'Default newsletter'
+name: 'Blog newsletter'
 id: default
-description: 'This is our newsletter. '
+description: 'This is our blog newsletter. '
 format: plain
 priority: 0
 receipt: false
@@ -15,6 +15,7 @@ subject: '[[simplenews-newsletter:name]] [node:title]'
 from_address: pdelorme+govyukon@acromedia.com
 hyperlinks: false
 allowed_handlers:
+  0: '0'
   simplenews_all: '0'
 new_account: none
 access: default
