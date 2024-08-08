@@ -12,7 +12,7 @@ priority: 0
 receipt: false
 from_name: 'Recruitment Marketing'
 subject: '[[simplenews-newsletter:name]] [node:title]'
-from_address: pdelorme+govyukon@acromedia.com
+from_address: pscwebsite@yukon.ca
 hyperlinks: false
 allowed_handlers:
   0: '0'
