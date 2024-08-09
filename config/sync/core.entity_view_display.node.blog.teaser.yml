@@ -28,11 +28,11 @@ content:
     weight: 1
     region: content
   field_blog_date:
-    type: datetime_custom
+    type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'F d, o'
+      format_type: month_day_year_string
     third_party_settings: {  }
     weight: 0
     region: content
