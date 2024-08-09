@@ -6,7 +6,7 @@ newsletter:
   format: plain
   priority: 0
   receipt: true
-  from_address: pdelorme+govyukon@acromedia.com
+  from_address: pscwebsite@yukon.ca
   from_name: 'Recruitment Marketing'
 subscriber:
   sync_fields: true

@@ -21,10 +21,10 @@ content:
   mail:
     type: email_default
     weight: 0
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    region: content
   status:
     type: options_select
     weight: 1

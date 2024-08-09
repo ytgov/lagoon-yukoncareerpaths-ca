@@ -1,16 +1,16 @@
-uuid: 52fb7b1a-16df-4ba2-b74a-0aff3b4868c4
+uuid: fb97462d-d743-45b0-af69-a5992c759358
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.blog_tags
+    - taxonomy.vocabulary.blog_categories
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-id: taxonomy_term.blog_tags
+id: taxonomy_term.blog_categories
 target_entity_type_id: taxonomy_term
-target_bundle: blog_tags
+target_bundle: blog_categories
 default_langcode: site_default
 language_alterable: true

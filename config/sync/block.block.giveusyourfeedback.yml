@@ -30,6 +30,7 @@ visibility:
     context_mapping:
       node: '@node.node_route_context:node'
     bundles:
+      blog: blog
       career_profile: career_profile
       community_profile: community_profile
       landing_page: landing_page

@@ -1,0 +1,28 @@
+uuid: a2641827-bd07-4c7f-a7f0-85746f021dee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_date
+    - node.type.blog
+  module:
+    - datetime
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.blog.field_blog_date
+field_name: field_blog_date
+entity_type: node
+bundle: blog
+label: 'Blog Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

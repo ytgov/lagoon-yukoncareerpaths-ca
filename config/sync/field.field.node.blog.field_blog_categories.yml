@@ -1,22 +1,22 @@
-uuid: 476a7c33-0229-4f4b-9912-91b0a2545ddd
+uuid: be851643-adff-4718-871b-666cbc32b241
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tags
+    - field.storage.node.field_blog_categories
     - node.type.blog
-    - taxonomy.vocabulary.blog_tags
+    - taxonomy.vocabulary.blog_categories
   module:
     - tmgmt_content
 third_party_settings:
   tmgmt_content:
     excluded: false
-id: node.blog.field_tags
-field_name: field_tags
+id: node.blog.field_blog_categories
+field_name: field_blog_categories
 entity_type: node
 bundle: blog
-label: Tags
-description: ''
+label: Categories
+description: 'Categories related to this article.'
 required: false
 translatable: false
 default_value: {  }
@@ -25,7 +25,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      blog_tags: blog_tags
+      blog_categories: blog_categories
     sort:
       field: name
       direction: asc
