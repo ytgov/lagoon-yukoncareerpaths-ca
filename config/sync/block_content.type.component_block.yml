@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: component_block
 label: 'Component Block'
-revision: 1
+revision: true
 description: 'Display various content using components.'

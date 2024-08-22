@@ -13,7 +13,7 @@ third_party_settings:
 name: 'Landing Page'
 type: landing_page
 description: 'A full-width page without any sidebars. Typically used for pages like the homepage etc.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
