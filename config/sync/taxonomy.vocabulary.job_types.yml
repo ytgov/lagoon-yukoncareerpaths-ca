@@ -6,3 +6,4 @@ name: 'Job Types'
 vid: job_types
 description: 'Job types related to career profiles.'
 weight: 0
+new_revision: false
