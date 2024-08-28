@@ -7,6 +7,7 @@ dependencies:
     - filter.format.full_html
     - filter.format.webform_default
   module:
+    - file
     - filter
     - matomo
     - media
@@ -23,6 +24,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access shortcuts'
+  - 'delete own files'
   - 'opt-in or out of matomo tracking'
   - 'search content'
   - 'subscribe to newsletters'

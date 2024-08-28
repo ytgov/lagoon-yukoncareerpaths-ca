@@ -71,6 +71,7 @@ permissions:
   - 'delete own career_profile content'
   - 'delete own community_profile content'
   - 'delete own document media'
+  - 'delete own files'
   - 'delete own image media'
   - 'delete own landing_page content'
   - 'delete own page content'

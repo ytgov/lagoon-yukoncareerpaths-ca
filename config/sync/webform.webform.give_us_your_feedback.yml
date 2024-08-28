@@ -11,7 +11,7 @@ archive: false
 id: give_us_your_feedback
 title: 'Give us your feedback'
 description: '<p>Feedback form with a thumbs up or down.</p>'
-category: ''
+categories: {  }
 elements: |-
   was_this_page_helpful:
     '#type': radios
@@ -31,7 +31,6 @@ elements: |-
       visible:
         ':input[name="was_this_page_helpful"]':
           value: 'Yes'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   how_can_we_improve_this_page:
     '#type': textarea
     '#title': 'How can we improve this page?'
@@ -40,7 +39,6 @@ elements: |-
       visible:
         ':input[name="was_this_page_helpful"]':
           value: 'No'
-    '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

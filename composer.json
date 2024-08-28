@@ -51,7 +51,7 @@
         "drupal/views_bulk_operations": "^4.2",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/webform": "^6.2@beta",
-        "drush/drush": "^11.4"
+        "drush/drush": "^12.4"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -65,7 +65,8 @@
             "drupal/core-project-message": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
@@ -129,11 +130,8 @@
             ]
         },
         "patches": {
-            "drupal/core": {
-                "Dialog drupalAutoButtons option should be respected on initial load": "https://www.drupal.org/files/issues/2022-12-16/2793343_75_0.patch"
-            },
             "drupal/entity_reference_revisions": {
-                "Non-translatable fields can only be changed when updating the current revision": "https://www.drupal.org/files/issues/2020-06-09/3150084_2.patch"
+                "Non-translatable fields can only be changed when updating the current revision": "https://www.drupal.org/files/issues/2024-01-15/3150084-35.patch"
             }
         }
     },
