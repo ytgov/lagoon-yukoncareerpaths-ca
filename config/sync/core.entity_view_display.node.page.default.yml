@@ -51,6 +51,7 @@ content:
     weight: 0
     region: content
 hidden:
+  addtoany: true
   field_disable_page_top_margin: true
   field_hide_header_elements: true
   field_share_this_page: true

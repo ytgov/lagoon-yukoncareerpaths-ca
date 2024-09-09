@@ -1,0 +1,48 @@
+uuid: 30ab5ff4-c2d1-40e1-9faa-7da13ac1eb10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blog_content_list.field_blog_content_list_items
+    - field.field.paragraph.blog_content_list.field_blog_content_list_style
+    - paragraphs.paragraphs_type.blog_content_list
+  module:
+    - paragraphs
+id: paragraph.blog_content_list.default
+targetEntityType: paragraph
+bundle: blog_content_list
+mode: default
+content:
+  field_blog_content_list_items:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: 'Blog Content List Item'
+      title_plural: 'Blog Content List Items'
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: blog_content_list_item
+      features:
+        add_above: '0'
+        collapse_edit_all: '0'
+        duplicate: '0'
+    third_party_settings: {  }
+  field_blog_content_list_style:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

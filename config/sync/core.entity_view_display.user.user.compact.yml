@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_role
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -20,7 +21,7 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: content
+      image_link: ''
       image_style: thumbnail
       image_loading:
         attribute: lazy
@@ -28,5 +29,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_role: true
   langcode: true
   member_for: true
+  simplenews: true

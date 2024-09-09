@@ -17,6 +17,7 @@ regions:
   content: Content
   content_below: 'Content Below'
   sidebar: Sidebar
+  sidebar_second: 'Sidebar Right'
   above_footer: 'Above Footer'
   footer: Footer
   user_menu: 'User Menu'

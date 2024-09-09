@@ -11,7 +11,7 @@ dependencies:
 id: mainnavigation_sub_nav
 theme: govt_yukon_rms
 region: sidebar
-weight: 0
+weight: -8
 provider: null
 plugin: 'menu_block:main'
 settings:

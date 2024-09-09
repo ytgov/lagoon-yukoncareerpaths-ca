@@ -1,0 +1,27 @@
+uuid: f0fdd341-6a59-41e9-8fc4-c8f41af5665e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blog_content_list_style
+    - paragraphs.paragraphs_type.blog_content_list
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.blog_content_list.field_blog_content_list_style
+field_name: field_blog_content_list_style
+entity_type: paragraph
+bundle: blog_content_list
+label: 'Blog Content List Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: small_images
+default_value_callback: ''
+settings: {  }
+field_type: list_string

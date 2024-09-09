@@ -34,6 +34,10 @@ blockquote,
     margin: rem(0 0 33px 0);
     padding: 0;
     line-height: 1.4;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &::before {
@@ -56,7 +60,7 @@ blockquote,
     transform: rotate(180deg);
 
     @include media-breakpoint-up(lg) {
-      bottom: rem(52px);
+      bottom: rem(55px);
       left: rem(80px);
       width: rem(92px);
       height: rem(72px);

@@ -1,0 +1,7 @@
+display:
+  recent_posts_block:
+    display_options:
+      fields:
+        field_blog_date:
+          settings:
+            date_format: 'j M'
