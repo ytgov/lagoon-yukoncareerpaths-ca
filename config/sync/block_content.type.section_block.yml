@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: section_block
 label: 'Section Block'
-revision: 1
+revision: true
 description: "A block with sections that contain components. Meant to be used standalone on a page or on Drupal's Block Layout page."
