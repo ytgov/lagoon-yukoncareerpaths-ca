@@ -1,4 +1,4 @@
-image: git.acromedia.com:4567/acro/code/docker:php8.1
+image: registry.git.acromedia.com/acro/code/docker:php8.1
 
 include:
   - project: 'acro/code/standards'
