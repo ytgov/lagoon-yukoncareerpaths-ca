@@ -13,7 +13,7 @@ third_party_settings:
 name: 'Career Profile'
 type: career_profile
 description: 'A profile that contains information related to a career. Is displayed within the listing on the Career Profiles section of the site.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

@@ -13,7 +13,7 @@ third_party_settings:
 name: 'Community Profile'
 type: community_profile
 description: 'A profile displaying information about a community. Is displayed within community listings.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

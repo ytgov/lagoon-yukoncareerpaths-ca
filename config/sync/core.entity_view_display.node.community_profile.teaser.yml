@@ -31,6 +31,7 @@ content:
     weight: 0
     region: content
 hidden:
+  addtoany: true
   field_components: true
   field_meta_tags: true
   field_page_banner: true
