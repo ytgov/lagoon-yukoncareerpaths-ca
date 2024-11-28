@@ -6,5 +6,6 @@ dependencies:
     - media
 id: media.small
 label: 'Small (100×100)'
+description: ''
 targetEntityType: media
 cache: true
