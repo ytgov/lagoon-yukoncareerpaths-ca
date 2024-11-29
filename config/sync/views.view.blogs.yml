@@ -241,6 +241,20 @@ display:
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: "<h3>No articles found</h3>\r\n<p>There are no articles associated with the selected categories.</p>\r\n<p>Please try searching with different categories.</p>"
+            format: full_html
+          tokenize: false
       filters:
         status:
           id: status
@@ -358,11 +372,14 @@ display:
         groups:
           1: AND
       defaults:
+        empty: false
         exposed_form: false
         relationships: false
         filters: false
         filter_groups: false
+        footer: false
       relationships: {  }
+      footer: {  }
       display_extenders:
         matomo:
           enabled: false
@@ -387,7 +404,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
