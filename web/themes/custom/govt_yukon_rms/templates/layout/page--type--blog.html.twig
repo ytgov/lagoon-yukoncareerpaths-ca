@@ -114,12 +114,6 @@
                     </div>
                   {% endif %}
                 {% endblock page_title %}
-
-                {# Blog Date. #}
-                {% if node and node.field_blog_date.value %}
-                  {{ drupal_field('field_blog_date', 'node', node.id, 'default') }}
-                {% endif %}
-                {# / Blog Date. #}
               </div>
             </div>
           </div>

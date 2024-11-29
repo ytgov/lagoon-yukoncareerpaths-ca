@@ -46,11 +46,17 @@
 
     input[type="submit"] {
       margin-right: rem(16px);
+      width: 100%;
       text-align: center;
 
+      @media (min-width: 410px) {
+        margin-right: rem(16px);
+        width: auto;
+      }
+
       @include media-breakpoint-up(lg) {
-        width: 100%;
         margin-right: 0;
+        width: 100%;
       }
     }
 

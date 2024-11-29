@@ -12,9 +12,11 @@
 
     .views-field-field-blog-date {
       font-size: $fs-base;
+      color: $c-zinc;
     }
 
     .views-field-title a {
+      font-weight: 500;
       text-decoration: none;
     }
   }
