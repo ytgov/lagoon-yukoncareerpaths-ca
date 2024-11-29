@@ -104,6 +104,15 @@
         {{ label }}
       </div>
     </a>
-    {{ content.field_blog_categories }}
+    {% if node.field_blog_categories.0.target_id %}
+      <div class="{{ component_prefix ~ '__categories' }}">
+        {% for term in node.field_blog_categories %}
+          {% set term_id = term.entity.id %}
+          {% set term_link = base_path ~ 'blog?field_blog_categories_target_id[' ~ term_id ~ ']=' ~ term_id  %}
+          {% set term_name = term.entity.name.value %}
+          <a href="{{ term_link }}">{{  term_name }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </div>

@@ -62,32 +62,33 @@
     text-decoration: underline;
   }
 
-  // Tags.
-  .field--name-field-blog-categories {
+  // Categories / Tags.
+  .comp-card__categories {
     position: relative;
-    padding: rem(0 20px 30px 20px);
+    padding: rem(0 20px 25px 20px);
+    font-size: $fs-base;
+    font-weight: $font-weight-light;
 
+    a {
+      color: $c-zinc;
+      font-weight: 500;
+
+      &:visited {
+        color: $c-link-visited;
+      }
+
+      &:hover,
+      &:focus {
+        color: $c-link-hover;
+      }
+    }
+
+    // Top border.
     &::before {
       content: '';
       display: block;
-      border-top: 1px solid $border-color;
-      margin-bottom: rem(36px);
-    }
-
-    .field__item {
-      display: inline-block;
-      font-size: $fs-base;
-      font-weight: $font-weight-light;
-
-      &::after {
-        content: ', ';
-        display: inline-block;
-        margin-right: 2px;
-      }
-
-      &:last-of-type::after {
-        content: '';
-      }
+      margin-bottom: rem(25px);
+      border-top: 1px solid $c-neutral-20;
     }
   }
 }
