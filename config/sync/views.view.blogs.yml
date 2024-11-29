@@ -182,7 +182,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: text
-          empty: false
+          empty: true
           content:
             value: "Welcome to our blog, your go-to resource for career opportunities in Yukon, Canada. Explore insightful articles, expert advice, and inspiring stories from individuals making their mark in various industries across the region. Join us as we delve into the diverse and exciting world of Yukon's job market!\r\n\r\nIn each post, we aim to provide valuable insights, tips, and resources to help you navigate the job market, discover new career paths, and make informed decisions about your professional journey. From in-depth guides on industry trends to personal narratives from local professionals, our blog covers a wide range of topics to cater to your interests and aspirations. "
             format: full_html
