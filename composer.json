@@ -133,6 +133,9 @@
         "patches": {
             "drupal/entity_reference_revisions": {
                 "Non-translatable fields can only be changed when updating the current revision": "https://www.drupal.org/files/issues/2024-01-15/3150084-35.patch"
+            },
+            "drupal/core": {
+                "Exposed filters get values from url when ajax is on": "https://www.drupal.org/files/issues/2024-08-23/drupal-3121172-34.patch"
             }
         }
     },
