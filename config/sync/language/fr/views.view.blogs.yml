@@ -5,3 +5,30 @@ display:
         field_blog_date:
           settings:
             date_format: 'j M'
+      title: 'Recent posts FR'
+    display_title: 'Recent Posts Block FR'
+  default:
+    display_options:
+      title: 'Yukon Career Paths Blog FR'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page FR'
+            items_per_page_options_all_label: '- Tous -'
+            offset_label: 'Offset FR'
+          views_infinite_scroll:
+            button_text: 'Load more FR'
+      exposed_form:
+        options:
+          submit_button: 'Apply FR'
+          reset_button_label: 'Reset FR'
+          exposed_sorts_label: 'Sort by FR'
+          sort_asc_label: 'Asc FR'
+          sort_desc_label: 'Desc FR'
+      use_more_text: 'more FR'
+      header:
+        area:
+          content:
+            value: '<p>(TO BE REVISED BY FSLD) Bienvenue sur notre blog, votre ressource incontournable pour les opportunités de carrière au Yukon, au Canada. Découvrez des articles perspicaces, des conseils d’experts et des histoires inspirantes de personnes qui ont fait leur marque dans divers secteurs de la région. Rejoignez-nous pour plonger dans le monde diversifié et passionnant du marché du travail du Yukon&nbsp;! Dans chaque article, nous visons à fournir des informations, des conseils et des ressources précieux pour vous aider à naviguer sur le marché du travail, à découvrir de nouveaux cheminements de carrière et à prendre des décisions éclairées concernant votre parcours professionnel. Des guides détaillés sur les tendances du secteur aux récits personnels de professionnels locaux, notre blog couvre un large éventail de sujets pour répondre à vos intérêts et aspirations.</p>'
+            format: full_html
+description: 'Blog page and related blocks FR'

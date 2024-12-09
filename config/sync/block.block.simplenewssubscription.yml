@@ -1,15 +1,14 @@
 uuid: cb5df050-7d19-4e5a-a055-12dcd60647b6
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - node
-    - simplenews
   theme:
     - govt_yukon_rms
 id: simplenewssubscription
 theme: govt_yukon_rms
-region: sidebar_second
+region: language_switcher
 weight: -7
 provider: null
 plugin: simplenews_subscription_block
