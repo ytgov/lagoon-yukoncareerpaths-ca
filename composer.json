@@ -67,7 +67,7 @@
             "phpstan/extension-installer": true,
             "cweagans/composer-patches": true,
             "php-http/discovery": true,
-            "tbachert/spi": true
+            "tbachert/spi": false
         },
         "sort-packages": true
     },
