@@ -46,10 +46,25 @@
 
   // Meta Information.
   .blog-post__meta {
-    padding: rem(16px 0);
+    padding: rem(20px 0);
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
     margin-bottom: rem(36px);
+  }
+
+  .blog-post__published-on__label {
+    margin: 0;
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+      margin: rem(0 0 8px 0);
+    }
+  }
+
+  .blog-post__published-on__date .field--name-field-blog-date {
+    margin: 0;
+    font-size: $fs-global;
+    font-weight: $font-weight-light;
   }
 
   .author {

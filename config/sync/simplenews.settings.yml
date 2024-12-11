@@ -1,5 +1,6 @@
 _core:
   default_config_hash: MQ_4kFOzBybKzwsUyT-FJLe20MzZj0tGSPLqXTWQJcg
+langcode: en
 hash_expiration: 86400
 newsletter:
   issue_tokens: false

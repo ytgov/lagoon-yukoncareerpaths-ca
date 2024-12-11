@@ -1,4 +1,4 @@
-{% extends 'page.html.twig' %}
+{% extends '@govt_yukon/templates/layout/page.html.twig' %}
 
 {% block page_body %}
   {% set site_content_attributes = create_attribute() %}
@@ -11,40 +11,12 @@
   {% endset %}
   {% set page_accent = true %}
 
-  {#
-  Render sidebars to check if it is truly empty.
-  Issue: https://www.drupal.org/node/953034.
-  #}
-  {%- macro hasContent(region) -%}
-    {%- set keep_tags = '<drupal-render-placeholder><form><embed><hr><iframe><img><input><link><object><script><source><style><video>' -%}
-    {%- set content = region|render|replace({"\n": "", "\r": "", "\t": ""})|striptags(keep_tags)|trim ? true : false -%}
-    {{- content -}}
-  {%- endmacro -%}
-
-  {% set left_sidebar_exists  = _self.hasContent(page.sidebar) %}
-  {% set right_sidebar_exists  = _self.hasContent(page.sidebar_second) %}
-  {% set both_sidebars_exist = left_sidebar_exists and right_sidebar_exists %}
-
-  {# Set column class based on sidebars. #}
-  {% if left_sidebar_exists and right_sidebar_exists %}
-    {% set col_class = 'col-lg-6' %}
-    {% set sidebar_col_class = 'col-lg-3' %}
-  {% elseif left_sidebar_exists or right_sidebar_exists %}
-    {% set col_class = 'col-lg-9' %}
-    {% set sidebar_col_class = 'col-lg-3' %}
-  {% else %}
-    {% set col_class = 'col-sm-12 col-main-content--full-width' %}
-  {% endif %}
-
   {# Site Content Classes. #}
   {%
     set site_content_classes = [
       'site-content',
       (node and node.field_hide_header_elements.value) ? 'site-content--hide-header-elements',
       (node and node.field_disable_page_top_margin.value) ? 'site-content--disable-top-margin',
-      left_sidebar_exists ? 'site-content--with-left-sidebar',
-      right_sidebar_exists ? 'site-content--with-right-sidebar',
-      both_sidebars_exist ? 'site-content--with-both-sidebars',
       page_accent ? 'site-content--with-page-accent'
     ]
   %}
@@ -85,6 +57,32 @@
           </div>
         {% endif %}
 
+        {% block page_title %}
+          {% if not (node and node.field_hide_header_elements.value) %}
+            {% if page.page_title %}
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="page-title-header">
+                    {% if parent_root_title %}
+                      <div class="page-title-overline">
+                        <p class="h-overline">{{ parent_root_title }}</p>
+                      </div>
+                    {% endif %}
+                    <div class="page-title-header__content">
+                      <div class="page-title-header__page-title">
+                        {{ page.page_title }}
+                      </div>
+                      {% if share_this_page %}
+                        {{ share_this_page_content }}
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endblock page_title %}
+
         {# Page Banner. #}
         {% if node and node.field_page_banner.0.entity.field_media_image.0.entity.fileuri %}
           <div class="row">
@@ -97,41 +95,8 @@
         {% endif %}
         {# / Page Banner. #}
 
-        {# Blog Post Header. #}
-        <div class="container g-0">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="blog-post-header">
-                <p class="h-overline">{{ 'Yukon Career Paths Blog'|t }}</p>
-                {% block page_title %}
-                  {% if page.page_title %}
-                    <div class="page-title-header">
-                      <div class="page-title-header__content">
-                        <div class="page-title-header__page-title">
-                          {{ page.page_title }}
-                        </div>
-                      </div>
-                    </div>
-                  {% endif %}
-                {% endblock page_title %}
-              </div>
-            </div>
-          </div>
-        </div>
-        {# / Blog Post Header. #}
-
         <div class="row">
-          {# Left Sidebar. #}
-          {% if left_sidebar_exists %}
-            <div class="{{ sidebar_col_class }}">
-              <aside class="site-sidebar site-sidebar--left" role="complementary">
-                {{ page.sidebar }}
-              </aside>
-            </div>
-          {% endif %}
-          {# / Left Sidebar. #}
-
-          <div class="{{ col_class }}">
+          <div class="col-sm-12 col-main-content--full-width">
             <div class="site-content__main-body">
               {% if page.help %}
                 {{ page.help }}
@@ -156,16 +121,6 @@
               {% endif %}
             </div>
           </div>
-
-          {# Right Sidebar. #}
-          {% if right_sidebar_exists %}
-            <div class="{{ sidebar_col_class }}">
-              <aside class="site-sidebar site-sidebar--right" role="complementary">
-                {{ page.sidebar_second }}
-              </aside>
-            </div>
-          {% endif %}
-          {# / Right Sidebar. #}
         </div>
       </div>
     </main>

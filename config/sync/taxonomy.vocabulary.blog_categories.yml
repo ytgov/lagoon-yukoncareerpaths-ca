@@ -6,3 +6,4 @@ name: 'Blog Categories'
 vid: blog_categories
 description: 'Categories related blog articles.'
 weight: 0
+new_revision: false
