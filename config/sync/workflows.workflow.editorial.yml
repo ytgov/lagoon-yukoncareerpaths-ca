@@ -1,0 +1,78 @@
+uuid: ab1abdf4-d95d-4e26-832e-fdfe04b301d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+  module:
+    - content_moderation
+_core:
+  default_config_hash: T7gMMyFbTYLalxpIOnzJebvek2OW0b1RgLVE9I2y228
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Archived
+      weight: 1
+      published: false
+      default_revision: true
+    draft:
+      label: Draft
+      weight: -2
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 0
+      published: true
+      default_revision: true
+    ready_for_review:
+      label: 'Ready for Review'
+      weight: -1
+      published: false
+      default_revision: true
+  transitions:
+    archive:
+      label: Archive
+      from:
+        - published
+      to: archived
+      weight: 0
+    archived_draft:
+      label: 'Restore to Draft'
+      from:
+        - archived
+      to: draft
+      weight: 1
+    archived_published:
+      label: Restore
+      from:
+        - archived
+      to: published
+      weight: 2
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: -3
+    publish:
+      label: Publish
+      from:
+        - draft
+        - published
+      to: published
+      weight: -1
+    review:
+      label: Review
+      from:
+        - draft
+      to: ready_for_review
+      weight: -2
+  entity_types:
+    node:
+      - blog
+  default_moderation_state: draft

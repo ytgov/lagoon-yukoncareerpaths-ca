@@ -1,0 +1,15 @@
+uuid: d1a14f5f-9936-4aa0-826e-7ddbb2246759
+langcode: en
+status: true
+dependencies: {  }
+name: blog_content_list_340x450_
+label: 'Blog Content List (340x450)'
+effects:
+  cf637a90-c63e-4a9a-9ca6-4ba14bdeee67:
+    uuid: cf637a90-c63e-4a9a-9ca6-4ba14bdeee67
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 340
+      height: 450
+      anchor: center-center

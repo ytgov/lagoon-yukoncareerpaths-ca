@@ -17,9 +17,11 @@
     "require": {
         "ext-simplexml": "*",
         "composer/installers": "^2.0",
-        "cweagans/composer-patches": "^1.7",
+        "cweagans/composer-patches": "1.x-dev",
+        "drupal/addtoany": "^2.0",
         "drupal/admin_toolbar": "^3.3",
         "drupal/allowed_formats": "^2.0",
+        "drupal/better_exposed_filters": "^7.0@beta",
         "drupal/coder": "8.3.17",
         "drupal/color_field": "^3.0",
         "drupal/core-composer-scaffold": "^10.0",
@@ -41,6 +43,7 @@
         "drupal/redirect": "^1.8",
         "drupal/schema_metatag": "^2.4",
         "drupal/simple_sitemap": "^4.1",
+        "drupal/simplenews": "^4.0",
         "drupal/svg_image_field": "^2.2@beta",
         "drupal/tmgmt": "^1.15",
         "drupal/token": "^1.11",
@@ -48,7 +51,7 @@
         "drupal/views_bulk_operations": "^4.2",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/webform": "^6.2@beta",
-        "drush/drush": "^12.4"
+        "drush/drush": "^12.5"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -63,7 +66,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
             "cweagans/composer-patches": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "tbachert/spi": false
         },
         "sort-packages": true
     },
@@ -129,6 +133,9 @@
         "patches": {
             "drupal/entity_reference_revisions": {
                 "Non-translatable fields can only be changed when updating the current revision": "https://www.drupal.org/files/issues/2024-01-15/3150084-35.patch"
+            },
+            "drupal/core": {
+                "Exposed filters get values from url when ajax is on": "https://www.drupal.org/files/issues/2024-08-23/drupal-3121172-34.patch"
             }
         }
     },

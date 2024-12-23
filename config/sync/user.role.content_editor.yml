@@ -9,6 +9,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - media.type.svg
+    - node.type.blog
     - node.type.career_profile
     - node.type.community_profile
     - node.type.landing_page
@@ -16,8 +17,10 @@ dependencies:
     - taxonomy.vocabulary.departments
     - taxonomy.vocabulary.job_types
     - taxonomy.vocabulary.locations
+    - workflows.workflow.editorial
   module:
     - block_content
+    - content_moderation
     - content_translation
     - contextual
     - file
@@ -47,6 +50,7 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer url aliases'
+  - 'create blog content'
   - 'create career_profile content'
   - 'create community_profile content'
   - 'create content translations'
@@ -77,7 +81,9 @@ permissions:
   - 'delete terms in departments'
   - 'delete terms in job_types'
   - 'delete terms in locations'
+  - 'edit any blog content'
   - 'edit behavior plugin settings'
+  - 'edit own blog content'
   - 'edit own career_profile content'
   - 'edit own community_profile content'
   - 'edit own document media'
@@ -111,9 +117,12 @@ permissions:
   - 'translate svg media'
   - 'update content translations'
   - 'update media'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
   - 'use text format basic_text'
   - 'use text format full_html'
   - 'view all revisions'
+  - 'view blog revisions'
   - 'view career_profile revisions'
   - 'view community_profile revisions'
   - 'view landing_page revisions'

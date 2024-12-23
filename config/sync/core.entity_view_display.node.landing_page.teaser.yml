@@ -19,6 +19,7 @@ bundle: landing_page
 mode: teaser
 content: {  }
 hidden:
+  addtoany: true
   field_components: true
   field_disable_page_top_margin: true
   field_hide_header_elements: true

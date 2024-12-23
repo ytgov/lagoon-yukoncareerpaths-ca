@@ -13,6 +13,7 @@ dependencies:
     - media
     - search
     - shortcut
+    - simplenews
     - system
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
@@ -26,6 +27,7 @@ permissions:
   - 'delete own files'
   - 'opt-in or out of matomo tracking'
   - 'search content'
+  - 'subscribe to newsletters'
   - 'use text format basic_text'
   - 'use text format full_html'
   - 'use text format webform_default'

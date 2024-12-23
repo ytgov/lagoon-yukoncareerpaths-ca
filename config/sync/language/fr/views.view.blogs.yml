@@ -1,0 +1,21 @@
+display:
+  recent_posts_block:
+    display_options:
+      fields:
+        field_blog_date:
+          settings:
+            date_format: 'j M'
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p>Welcome to our blog, your go-to resource for career opportunities in Yukon, Canada. Explore insightful articles, expert advice, and inspiring stories from individuals making their mark in various industries across the region. Join us as we delve into the diverse and exciting world of Yukon's job market!</p><p>In each post, we aim to provide valuable insights, tips, and resources to help you navigate the job market, discover new career paths, and make informed decisions about your professional journey. From in-depth guides on industry trends to personal narratives from local professionals, our blog covers a wide range of topics to cater to your interests and aspirations.</p>"
+            format: full_html
+  blog_list:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<h3>Aucun article trouvé</h3><p>Il n'y a aucun article associé aux catégories sélectionnées.</p><p>Veuillez rechercher avec différentes catégories.</p>"
+            format: full_html

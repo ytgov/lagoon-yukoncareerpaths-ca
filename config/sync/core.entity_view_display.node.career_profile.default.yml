@@ -83,6 +83,7 @@ content:
     weight: 6
     region: content
 hidden:
+  addtoany: true
   field_share_this_page: true
   langcode: true
   links: true
