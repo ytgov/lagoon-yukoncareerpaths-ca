@@ -1,6 +1,6 @@
 uuid: 32428d14-d813-4275-9c89-578e73c2f92a
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.blogs
@@ -11,7 +11,7 @@ dependencies:
     - govt_yukon_rms
 id: views_block__blogs_recent_posts_block
 theme: govt_yukon_rms
-region: language_switcher
+region: sidebar_second
 weight: -8
 provider: null
 plugin: 'views_block:blogs-recent_posts_block'

@@ -27,5 +27,7 @@ settings:
   depth: 1
   expand_all_items: false
   parent: 'header:'
+  render_parent: false
   suggestion: header
+  hide_on_nonactive: false
 visibility: {  }
