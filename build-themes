@@ -1,0 +1,3 @@
+cd web/themes/custom/govt_yukon && npm i && npm run compile && cd -
+cd web/themes/custom/govt_yukon_claro && npm i && npm run compile && cd -
+cd web/themes/custom/govt_yukon_rms && npm i && npm run compile && cd -
