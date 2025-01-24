@@ -69,6 +69,7 @@ module:
   simple_sitemap_views: 0
   simplenews: 0
   svg_image_field: 0
+  symfony_mailer: 0
   system: 0
   taxonomy: 0
   text: 0

@@ -45,6 +45,7 @@
         "drupal/simple_sitemap": "^4.1",
         "drupal/simplenews": "^4.0",
         "drupal/svg_image_field": "^2.2@beta",
+        "drupal/symfony_mailer": "^1.4",
         "drupal/tmgmt": "^1.15",
         "drupal/token": "^1.11",
         "drupal/twig_tweak": "^3.2",
