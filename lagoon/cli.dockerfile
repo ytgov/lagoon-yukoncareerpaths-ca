@@ -1,4 +1,4 @@
-FROM uselagoon/php-8.1-cli-drupal:latest
+FROM ghcr.io/ytgov/lagoon-boutique-base-image-cli:latest
 
 COPY composer.* /app/
 RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev

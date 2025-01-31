@@ -1,7 +1,5 @@
 docker-compose-yaml: docker-compose.yml
 project: government-of-yukon-recruitment-marketing-drupal
-api: 'https://api.lagoon-prd.acromedia.com/graphql'
-ssh: 'ssh.lagoon-prd.acromedia.com:22'
 environment_variables:
   git_sha: true
 
